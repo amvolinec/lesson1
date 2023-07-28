@@ -3,10 +3,19 @@
 # Press ⌃R to execute it or replace it with your code.
 # Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
 
+count = int(input('Введите кол-во монет '))
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
+var = 0
+count_0 = 0
+count_1 = 0
 
-
-print("Hello!")
+for i in range(count):
+    var = int(input(f'Положение монеты {i}: 0 или 1 ? '))
+    if var == 1:
+        count_1 += 1
+    else:
+        count_0 += 1
+if count_1 < count_0:
+    print(f'Кол-во монет, чтобы перевернуть: {count_1}')
+else:
+    print(f'Кол-во монет, чтобы перевернуть: {count_0}')
